@@ -1,4 +1,5 @@
-const phrases = [
+document.addEventListener("DOMContentLoaded", () => {
+  const phrases = [
     "A Striving Software Developer",
     "A Passionate Coder",
     "An Innovative Thinker",
@@ -23,7 +24,7 @@ const phrases = [
   const delayBetweenPhrases = 2000;
   
   const typewriterElement = document.querySelector(".typewriter p");
-  
+
   function type() {
     if (currentLetterIndex < phrases[currentPhraseIndex].length) {
       typewriterElement.textContent += phrases[currentPhraseIndex].charAt(currentLetterIndex);
@@ -45,7 +46,17 @@ const phrases = [
     }
   }
   
-  document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(type, delayBetweenPhrases);
+  setTimeout(type, delayBetweenPhrases);
+
+  const bubbles = document.querySelectorAll('.bubble');
+
+  bubbles.forEach(bubble => {
+    const randomLeft = Math.random() * 100 + 'vw';
+    const randomDuration = Math.random() * 10 + 5 + 's';
+    const randomDelay = Math.random() * 5 + 's';
+
+    bubble.style.left = randomLeft;
+    bubble.style.animationDuration = randomDuration;
+    bubble.style.animationDelay = randomDelay;
   });
-  
+});
