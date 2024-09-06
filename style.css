@@ -25,24 +25,6 @@
     scroll-behavior: smooth;
   }
   
-  @media (max-width: 75em) {
-    html {
-      font-size: 60%;
-    }
-  }
-  
-  @media (max-width: 61.25em) {
-    html {
-      font-size: 58%;
-    }
-  }
-  
-  @media (max-width: 28.75em) {
-    html {
-      font-size: 55%;
-    }
-  }
-  
   body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.8rem; 
@@ -79,63 +61,86 @@
     display: block;
     width: 100%;
   }
+  
   .nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    padding: 0 2rem;
     background: var(--main-lightblue);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     z-index: 10;
   }
 
-  .nav_name a {
+  .nav-left {
     display: flex;
-    justify-content: flex-start;
-    position: fixed;
-    top: 18px;
-    left: 30px;
-    z-index: 10;
-    font-weight: 500;
-    font-size: 20.3px;
+    align-items: center;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-left:hover {
+    transition: all 0.3s ease-in-out;
+    background: var(--main-white);
+  }
+
+  .logo {
+    height: 40px;
+    margin-right: 10px;
+    width: auto;
+  }
+
+  .nav-left h4 {
+    font-size: 2rem;
     color: var(--main-black);
+    margin: 0;
+  }
+
+  .nav-left a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
     transition: 0.3s all ease-in-out;
   }
 
-  .nav_name a:hover {
-    transition: 0.3s all ease-in-out;
-    color: var(--main-white);
-  }
-
-  @media all and (max-width: 580px) {
-    .nav_name {font-size:0px; top: 22.8px; left: 0px;}
-}
-  
   .nav-list {
     display: flex;
-    margin-right: 2rem;
+    list-style: none;
+    margin: 0;
   }
-  
-  @media (max-width: 28.75em) {
-    .nav {
-      justify-content: center;
-    }
-  
-    .nav-list {
-      margin: 0 1rem;
-    }
+
+  .nav-list li {
+    margin-left: 20px;
   }
-  
+
   .nav-list a {
     display: block;
-    font-size: 2.2rem;
-    padding: 2rem;
-  }
-  
+    font-size: 1.8rem;
+    padding: 1.75rem 0.75rem 1.75rem 0.75rem;
+    color: var(--main-white);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }   
+
   .nav-list a:hover {
     background: var(--main-blue);
+  }
+
+  @media (max-width: 580px) {
+    .nav-left h4 {
+        font-size: 1.6rem;
+    }
+    .logo {
+        height: 30px;
+    }
+    .nav-list a {
+        font-size: 1.6rem;
+        padding: 0.8rem;
+    }
   }
   
   .welcome-section {
@@ -164,16 +169,14 @@
   .projects-section-header {
     max-width: 640px;
     margin: 0 auto 6rem auto;
-    border-bottom: 0.2rem solid var(--main-white);
   }
 
-  
-  
   @media (max-width: 28.75em) {
     .projects-section-header {
       font-size: 4rem;
     }
   }
+
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

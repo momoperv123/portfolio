@@ -1,20 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const phrases = [
-    "A Striving Software Developer",
-    "A Passionate Coder",
-    "An Innovative Thinker",
+    "A Striving Software Engineer",
+    "An Exercise Enthusiast",
+    "A Passionate Programmer",
+    "A Podcast Enjoyer",
     "A Lifelong Learner",
-    "A Creative Problem Solver",
-    "An Agile Developer",
-    "A Technology Enthusiast",
-    "A Team Player",
-    "An Effective Communicator",
-    "A Front-End Developer",
-    "A UI/UX Advocate",
-    "A JavaScript Ninja",
-    "A Code Perfectionist",
-    "A User-Centric Developer",
-    "A Solution-Oriented Engineer",
+    "A Student",
+    "A Team Player"
   ];
   
   let currentPhraseIndex = 0;
